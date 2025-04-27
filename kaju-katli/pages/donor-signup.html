@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration | FoodShare</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <i class="fas fa-seedling"></i>
+                    <h1>FoodShare</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h2>Sign Up as Food Donor</h2>
+                    <p>Join our network of businesses reducing food waste</p>
+                </div>
+                <form id="donor-signup-form" class="auth-form">
+                    <div class="form-tabs">
+                        <button type="button" class="tab-btn active" data-tab="donor-info">Account Info</button>
+                        <button type="button" class="tab-btn" data-tab="business-info">Business Details</button>
+                        <button type="button" class="tab-btn" data-tab="donation-info">Donation Preferences</button>
+                    </div>
+                    
+                    <div id="donor-info" class="tab-content active">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                            <div class="error-message" id="password-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                            <div class="error-message" id="confirm-password-error"></div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-primary next-btn" data-tab="business-info">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div id="business-info" class="tab-content">
+                        <div class="form-group">
+                            <label for="business-name">Business Name</label>
+                            <input type="text" id="business-name" name="business-name" required>
+                            <div class="error-message" id="business-name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="business-type">Business Type</label>
+                            <select id="business-type" name="business-type" required>
+                                <option value="">Select Business Type</option>
+                                <option value="restaurant">Restaurant</option>
+                                <option value="hotel">Hotel</option>
+                                <option value="caterer">Caterer</option>
+                                <option value="supermarket">Supermarket</option>
+                                <option value="bakery">Bakery</option>
+                                <option value="cafe">Café</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="business-type-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-name">Contact Person</label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                            <div class="error-message" id="contact-name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <div class="error-message" id="phone-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+                            <div class="error-message" id="address-error"></div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline-primary prev-btn" data-tab="donor-info">Previous</button>
+                            <button type="button" class="btn btn-primary next-btn" data-tab="donation-info">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div id="donation-info" class="tab-content">
+                        <div class="form-group">
+                            <label>Food Types Available for Donation</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-prepared" name="food-types" value="prepared">
+                                    <label for="food-prepared">Prepared Meals</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-produce" name="food-types" value="produce">
+                                    <label for="food-produce">Fresh Produce</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-bakery" name="food-types" value="bakery">
+                                    <label for="food-bakery">Bakery Items</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-dairy" name="food-types" value="dairy">
+                                    <label for="food-dairy">Dairy Products</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-meat" name="food-types" value="meat">
+                                    <label for="food-meat">Meat & Seafood</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-canned" name="food-types" value="canned">
+                                    <label for="food-canned">Canned & Packaged</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="food-types-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Typical Donation Frequency</label>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="freq-daily" name="donation-frequency" value="daily">
+                                    <label for="freq-daily">Daily</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="freq-weekly" name="donation-frequency" value="weekly">
+                                    <label for="freq-weekly">Weekly</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="freq-monthly" name="donation-frequency" value="monthly">
+                                    <label for="freq-monthly">Monthly</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="freq-irregular" name="donation-frequency" value="irregular">
+                                    <label for="freq-irregular">Irregular/As Needed</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="donation-frequency-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup-options">Preferred Pickup Times</label>
+                            <select id="pickup-options" name="pickup-options" multiple required>
+                                <option value="morning">Morning (8am-12pm)</option>
+                                <option value="afternoon">Afternoon (12pm-5pm)</option>
+                                <option value="evening">Evening (5pm-9pm)</option>
+                                <option value="night">Late Night (9pm-12am)</option>
+                            </select>
+                            <small>Hold Ctrl/Cmd to select multiple options</small>
+                            <div class="error-message" id="pickup-options-error"></div>
+                        </div>
+                        <div class="form-group terms-checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                            <div class="error-message" id="terms-error"></div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline-primary prev-btn" data-tab="business-info">Previous</button>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                    <h2>FoodShare</h2>
+                    <p>Connecting surplus food with those who need it most</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Platform</h3>
+                        <ul>
+                            <li><a href="../index.html#about">About Us</a></li>
+                            <li><a href="../index.html#how-it-works">How It Works</a></li>
+                            <li><a href="../index.html#features">Features</a></li>
+                            <li><a href="../index.html#testimonials">Success Stories</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Partner Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Data Protection</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodShare. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/forms.js"></script>
+    <script src="../js/donor.js"></script>
+</body>
+</html>

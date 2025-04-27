@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard | FoodShare</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-seedling"></i>
+                <h2>FoodShare</h2>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="user-details">
+                    <h3 id="business-name">Business Name</h3>
+                    <p id="business-type">Restaurant</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#donations"><i class="fas fa-box-open"></i> Manage Donations</a>
+                    </li>
+                    <li>
+                        <a href="#history"><i class="fas fa-history"></i> Donation History</a>
+                    </li>
+                    <li>
+                        <a href="#pickup-schedule"><i class="fas fa-calendar-alt"></i> Pickup Schedule</a>
+                    </li>
+                    <li>
+                        <a href="#impact"><i class="fas fa-chart-line"></i> Impact Report</a>
+                    </li>
+                    <li>
+                        <a href="#profile"><i class="fas fa-user-cog"></i> Profile Settings</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <div class="page-title">
+                        <h1>Donor Dashboard</h1>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-outline-primary notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <div class="user-menu">
+                            <button class="user-menu-btn">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="user-name">John Doe</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <section id="dashboard-section" class="content-section active">
+                    <div class="section-header">
+                        <h2>Overview</h2>
+                        <p class="date-display">April 27, 2025</p>
+                    </div>
+
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3>Total Donations</h3>
+                                <p class="stat-number">145</p>
+                                <p class="stat-change positive">+12% since last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-weight-scale"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3>Food Donated</h3>
+                                <p class="stat-number">1,250 lbs</p>
+                                <p class="stat-change positive">+5% since last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3>People Helped</h3>
+                                <p class="stat-number">625</p>
+                                <p class="stat-change positive">+8% since last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3>Carbon Offset</h3>
+                                <p class="stat-number">2.5 tons</p>
+                                <p class="stat-change positive">+3% since last month</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-row">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Recent Donations</h3>
+                                <a href="#donations" class="view-all">View All</a>
+                            </div>
+                            <div class="card-content">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Food Type</th>
+                                            <th>Quantity</th>
+                                            <th>Distributor</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Apr 26, 2025</td>
+                                            <td>Prepared Meals</td>
+                                            <td>15 lbs</td>
+                                            <td>City Food Bank</td>
+                                            <td><span class="status completed">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 24, 2025</td>
+                                            <td>Bakery Items</td>
+                                            <td>8 lbs</td>
+                                            <td>Hope Shelter</td>
+                                            <td><span class="status completed">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 22, 2025</td>
+                                            <td>Fresh Produce</td>
+                                            <td>20 lbs</td>
+                                            <td>Community Kitchen</td>
+                                            <td><span class="status completed">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 20, 2025</td>
+                                            <td>Prepared Meals</td>
+                                            <td>12 lbs</td>
+                                            <td>Hope Shelter</td>
+                                            <td><span class="status completed">Completed</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-row">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Upcoming Pickups</h3>
+                                <a href="#pickup-schedule" class="view-all">View Schedule</a>
+                            </div>
+                            <div class="card-content">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Distributor</th>
+                                            <th>Food Types</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Apr 28, 2025</td>
+                                            <td>5:30 PM</td>
+                                            <td>City Food Bank</td>
+                                            <td>Prepared Meals, Bakery</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Cancel</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 30, 2025</td>
+                                            <td>6:00 PM</td>
+                                            <td>Hope Shelter</td>
+                                            <td>Fresh Produce, Dairy</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Cancel</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-row">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Create New Donation</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="quick-donation-form">
+                                    <p>Have surplus food to donate? Create a new donation listing now.</p>
+                                    <a href="#donations" class="btn btn-primary">Create Donation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/donor.js"></script>
+</body>
+</html>

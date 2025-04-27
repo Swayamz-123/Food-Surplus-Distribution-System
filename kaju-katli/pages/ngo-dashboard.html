@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributor Registration | FoodShare</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <i class="fas fa-seedling"></i>
+                    <h1>FoodShare</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h2>Sign Up as Food Distributor</h2>
+                    <p>Join our network of organizations fighting hunger</p>
+                </div>
+                <form id="ngo-signup-form" class="auth-form">
+                    <div class="form-tabs">
+                        <button type="button" class="tab-btn active" data-tab="account-info">Account Info</button>
+                        <button type="button" class="tab-btn" data-tab="organization-info">Organization Details</button>
+                        <button type="button" class="tab-btn" data-tab="distribution-info">Distribution Capacity</button>
+                    </div>
+                    
+                    <div id="account-info" class="tab-content active">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                            <div class="error-message" id="password-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                            <div class="error-message" id="confirm-password-error"></div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary next-btn" data-tab="organization-info">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div id="organization-info" class="tab-content">
+                        <div class="form-group">
+                            <label for="org-name">Organization Name</label>
+                            <input type="text" id="org-name" name="org-name" required>
+                            <div class="error-message" id="org-name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="org-type">Organization Type</label>
+                            <select id="org-type" name="org-type" required>
+                                <option value="">Select Organization Type</option>
+                                <option value="food-bank">Food Bank</option>
+                                <option value="shelter">Shelter</option>
+                                <option value="community-kitchen">Community Kitchen</option>
+                                <option value="religious">Religious Organization</option>
+                                <option value="school">School/University</option>
+                                <option value="nonprofit">Non-Profit Organization</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="org-type-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="org-id">Registration/Tax ID (Optional)</label>
+                            <input type="text" id="org-id" name="org-id">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-name">Contact Person</label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                            <div class="error-message" id="contact-name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <div class="error-message" id="phone-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+                            <div class="error-message" id="address-error"></div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline-secondary prev-btn" data-tab="account-info">Previous</button>
+                            <button type="button" class="btn btn-secondary next-btn" data-tab="distribution-info">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div id="distribution-info" class="tab-content">
+                        <div class="form-group">
+                            <label>Food Types Needed</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-prepared" name="food-types" value="prepared">
+                                    <label for="food-prepared">Prepared Meals</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-produce" name="food-types" value="produce">
+                                    <label for="food-produce">Fresh Produce</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-bakery" name="food-types" value="bakery">
+                                    <label for="food-bakery">Bakery Items</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-dairy" name="food-types" value="dairy">
+                                    <label for="food-dairy">Dairy Products</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-meat" name="food-types" value="meat">
+                                    <label for="food-meat">Meat & Seafood</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="food-canned" name="food-types" value="canned">
+                                    <label for="food-canned">Canned & Packaged</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="food-types-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service-area">Service Area (miles)</label>
+                            <input type="number" id="service-area" name="service-area" min="1" max="100" value="10" required>
+                            <div class="error-message" id="service-area-error"></div>
+                            <small>Maximum distance willing to travel for pickup</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="people-served">People Served (Approximate)</label>
+                            <input type="number" id="people-served" name="people-served" min="1" required>
+                            <div class="error-message" id="people-served-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Available Pickup Times</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="time-morning" name="pickup-times" value="morning">
+                                    <label for="time-morning">Morning (8am-12pm)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="time-afternoon" name="pickup-times" value="afternoon">
+                                    <label for="time-afternoon">Afternoon (12pm-5pm)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="time-evening" name="pickup-times" value="evening">
+                                    <label for="time-evening">Evening (5pm-9pm)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="time-night" name="pickup-times" value="night">
+                                    <label for="time-night">Late Night (9pm-12am)</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="pickup-times-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="storage-capacity">Storage Capacity</label>
+                            <select id="storage-capacity" name="storage-capacity" required>
+                                <option value="">Select Storage Capacity</option>
+                                <option value="small">Small (e.g., residential refrigerator)</option>
+                                <option value="medium">Medium (e.g., commercial refrigerator)</option>
+                                <option value="large">Large (e.g., walk-in cooler/freezer)</option>
+                                <option value="industrial">Industrial (e.g., warehouse with cooling)</option>
+                            </select>
+                            <div class="error-message" id="storage-capacity-error"></div>
+                        </div>
+                        <div class="form-group terms-checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                            <div class="error-message" id="terms-error"></div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline-secondary prev-btn" data-tab="organization-info">Previous</button>
+                            <button type="submit" class="btn btn-primary">Complete Registration</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                    <h2>FoodShare</h2>
+                    <p>Connecting surplus food with those who need it most</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Platform</h3>
+                        <ul>
+                            <li><a href="../index.html#about">About Us</a></li>
+                            <li><a href="../index.html#how-it-works">How It Works</a></li>
+                            <li><a href="../index.html#features">Features</a></li>
+                            <li><a href="../index.html#testimonials">Success Stories</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Partner Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Data Protection</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodShare. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/distributor.js"></script>
+    <script src="../js/forms.js"></script>
+</body>
+</html>
